@@ -1,4 +1,4 @@
-class reg {
+class regnumavgtime {
   
     public static void main(String[] args) {
         String[] a = {"2022bcs193", "2022bit043", "Orange", "2022bit064", "2022bit152","2022bit153","2022bit052","2023bit041","2022bit024","cat"};
