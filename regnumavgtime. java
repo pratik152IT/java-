@@ -1,0 +1,113 @@
+class reg {
+  
+    public static void main(String[] args) {
+        String[] a = {"2022bcs193", "2022bit043", "Orange", "2022bit064", "2022bit152","2022bit153","2022bit052","2023bit041","2022bit024","cat"};
+
+      long timearray1[]=new long[10];
+	 gettime1(timearray1,a);
+	double avg1=avgtime(timearray1);
+	System.out.println("avg1 "+avg1);
+      
+	 long timearray2[]=new long[10];
+	 gettime2(timearray2,a);
+	double avg2=avgtime(timearray2);
+	System.out.println("avg2 "+avg2);
+        
+    }
+
+    public static int Count1(String[] registrations) {
+        int valid = 0;
+        int not = 0;
+
+        for (int i = 0; i < registrations.length; i++) {
+            if (registrations[i].length() == 10) {
+                if (registrations[i].contains("20")) {
+                    if (registrations[i].contains("bit")) {
+                        valid++;
+                    } else {
+                        not++;
+                    }
+                } else {
+                    not++;
+                }
+            } else {
+                not++;
+            }
+        }
+        return valid;
+    }
+   public static int Count2(String[] registrations) {
+        int valid = 0;
+        int not = 0;
+
+        for (int i = 0; i < registrations.length; i++) {
+            if (registrations[i].length() == 10) 
+	{
+                if (registrations[i].substring(0,2)=="20") 
+		{
+                    if (registrations[i].substring(4,7)=="bit" )
+		 {
+                        valid++;
+                    }
+		else{
+			not++;
+		}
+	}
+		else{
+			not++;
+		}
+	}
+		else{
+		not++;
+		}
+}
+        return valid;
+    }
+
+	 static void gettime1(long[] timetaken,String[] a)
+	{
+          int i=0;
+         while(i<10)
+	{
+	long t1=System.nanoTime();
+	  int p = Count1(a);
+	long t2=System.nanoTime(); 
+	long total=t2-t1;
+	timetaken[i]=total;
+	i++;
+	}
+	}
+	 static void gettime2(long[] timetaken,String[] a)
+	{
+          int i=0;
+         while(i<10)
+	{
+	long t1=System.nanoTime();
+	  int p = Count2(a);
+	long t2=System.nanoTime(); 
+	long total=t2-t1;
+	timetaken[i]=total;
+	i++;
+	}
+	}
+
+	static double avgtime(long[] timetaken)
+	{
+	int i=0;
+	long sum=0;
+         while(i<10)
+	{
+	
+	  sum = sum + timetaken[i];
+	i++;
+	}
+	
+	double avg=sum/10;
+	return avg;
+	}
+ 	 
+		
+	
+
+	
+}
