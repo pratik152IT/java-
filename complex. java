@@ -1,0 +1,54 @@
+class complex
+{
+  
+  static void cadd(int a1,int a2,int b1,int b2)
+  	{
+  	 int r1,r2;
+  	 r1=a1+b1;
+  	 r2=a2+b2;
+  	 System.out.println("Addition: "+r1+"+"+r2+"i");
+  	 
+  	 }
+  static void csub(int a1,int a2,int b1,int b2)
+  	{
+  	 int r1,r2;
+  	 r1=a1-b1;
+  	 r2=a2-b2;
+  	 System.out.println("Substraction :"+r1+"+"+r2+"i");
+  	 
+  	 }
+  static void cmul(int a1,int a2,int b1,int b2)
+        {
+        int r1,r2;
+  	 r1=((a1*b1)-(a2*b2));
+  	 r2=((a1*b2)+(a2*b1));
+  	 System.out.println("Multiplication :"+r1+"+"+r2+"i");
+  	 }
+  static void cdiv(int a1,int a2,int b1,int b2)
+        {
+        int r1,r2;
+        if(b1==0&&b2==0)
+        {
+                 System.out.println("Not Possible!!!");
+  	 	
+  	 }
+  	 else
+  	 {
+  	
+  	        r1=((a1*b1)+(a2*b2))/((b1*b1)+(b2*b2));
+  	 	r2=(-(a1*b2)+(a2*b1))/((b1*b1)+(b2*b2));
+  	 	System.out.println("Division :"+r1+"+"+r2+"i");
+  	 }
+  	 }
+  	 
+  public static void main(String [] args)
+  	{
+  	int x1=10,y1=9,x2=5,y2=0;
+  	cadd(x1,y1,x2,y2);
+  	csub(x1,y1,x2,y2);
+  	cmul(x1,y1,x2,y2);
+  	cdiv(x1,y1,x2,y2);
+  	}
+  }
+  	 
+
