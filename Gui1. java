@@ -1,0 +1,38 @@
+import javax.swing.*;
+import java.awt.*;
+
+class Calci extends JFrame
+{
+    JLabel num1Label, num2Label, resultLabel;
+    JTextField num1TField, num2TField, resultTField;
+    JButton addButton;
+
+    public Calci()
+{
+        num1Label = new JLabel("Num 1: ");
+        num2Label = new JLabel("Num 2: ");
+        resultLabel = new JLabel("Result: ");
+        num1TField = new JTextField(20);
+        num2TField = new JTextField(20);
+        resultTField = new JTextField(20);
+        addButton = new JButton("Add");
+
+        setLayout(new FlowLayout());
+        add(num1Label);
+        add(num1TField);
+        add(num2Label);
+        add(num2TField);
+        add(addButton);
+        add(resultLabel);
+        add(resultTField);
+
+        setSize(400, 400);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("HI");
+        Calci cal = new Calci();
+    }
+}
