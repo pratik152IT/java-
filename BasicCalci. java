@@ -1,0 +1,41 @@
+
+
+class BasicCalci{
+    static double add(double a, double b) {
+        return a + b;
+    }
+
+    static double subtract(double a, double b) {
+        return a - b;
+    }
+
+    static double multiply(double a, double b) {
+        return a * b;
+    }
+
+    static double divide(double a, double b) {
+        try  {
+            return a/b;
+        }
+        catch{Exception e}
+       {
+         System.out.println{"Arithmetic Exception divide by zero" }
+    }
+
+    public static void main(String[] args) 
+{
+        
+                result1= add(firstNumber, secondNumber);
+                System.out.println("addition " + result1);
+               
+                result2 = subtract(firstNumber, secondNumber);
+                System.out.println("subtraction " + result2);
+           
+                result3 = multiply(firstNumber, secondNumber);
+                System.out.println("multiplication :" + result3);
+
+                result4= divide(firstNumber, secondNumber);
+                System.out.println("division: " + result4);
+                
+    }
+}
